@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Neue', sans-serif;
+}
+
+/*HEADER*/
+.first-container header{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightseagreen;
+}
+#logo-name{
+    font-size: 35px;
+    color: rgb(8, 8, 70);
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.contacts{
+    display: flex;
+    margin-top: 12px;
+}
+.contacts li{
+    margin-right: 40px;
+    list-style-type: none;
+}
+.join{
+    display: flex;
+    justify-content: space-between;
+}
+/*HEADER*/
