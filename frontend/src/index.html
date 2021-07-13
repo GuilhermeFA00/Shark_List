@@ -34,24 +34,29 @@
 
     <h2>---NOTES ZONE---</h2>
 
+    <button id="add-block">Add new block</button>
+
     <div class="third-container">
-        <header>TubaTuba</header>
-        <div class="note-container">
-            <input type="text" placeholder="pour your ocean of ideas, little shark">
+
+        <header>Notes</header>
+        <div class="note-input">
+            <input type="text" placeholder="pour,my little shark">
             <button><i class="fas fa-plus"></i></button>
         </div>
-        <ul class="todoList">
-            <!-- data are comes from local storage -->
-        </ul>
-        <div class="your-tasks">
-            <span>You have <span class="pendingTasks"></span> pending tasks</span>
+        <ul class="list"></ul>
+        <div class="footer">
+            <span>You have <span class="your-tasks"></span> pending tasks</span>
             <button>Clear All</button>
         </div>
+    </div>
+
     </div>
 
     <div class="fourth-container">
         <footer class="footer"></footer>
     </div>
+
+    <script src="./app.js"></script>
 </body>
 
 </html>
