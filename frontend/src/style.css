@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+::selection {
+  color: #ffff;
+  background: rgb(142, 73, 232);
+}
+
 body {
   font-family: "Neue", sans-serif;
   width: 100%;
