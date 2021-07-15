@@ -1,43 +1,42 @@
-const inputBody = document.querySelector(".note-input input");
-const btnTxt = document.querySelector(".note-input button");
+const inputBody = document.querySelector(".noteInput input");
+const addBtn = document.querySelector(".noteInput button");
 const list = document.querySelector(".list");
 const del = document.querySelector(".footer button");
 
+
 inputBody.onkeyup = () => {
-    let userInput = inputBody.value;
-    if (userInput.trim() != 0) {
-        btnTxt.classList.add("active");
+    let userEnteredValue = inputBody.value;
+    if (userEnteredValue.trim() != 0) {
+        addBtn.classList.add("active");
     } else {
-        btnTxt.classList.remove("active");
+        addBtn.classList.remove("active");
     }
 }
 
 showTasks();
 
-
-btnTxt.onclick = () => {
-    let userInput = inputBody.value;
-    let localStrg = localStorage.getItem("New note!");
-    if (localStrg == null) {
+addBtn.onclick = () => {
+    let userEnteredValue = inputBody.value;
+    let LocalStrg = localStorage.getItem("Notes");
+    if (LocalStrg == null) {
         listArray = [];
     } else {
-        listArray = JSON.parse(localStrg);
+        listArray = JSON.parse(LocalStrg);
     }
-    listArray.push(userInput);
-    localStrg.setItem("New note!", JSON.stringify(listArray));
+    listArray.push(userEnteredValue);
+    localStorage.setItem("Notes", JSON.stringify(listArray));
     showTasks();
-    btnTxt.classList.remove("active");
+    addBtn.classList.remove("active");
 }
 
 
 function showTasks() {
-    let localStrg = localStorage.getItem("New note!");
-    if (localStrg == null) {
+    let LocalStrg = localStorage.getItem("Notes");
+    if (LocalStrg == null) {
         listArray = [];
     } else {
-        listArray = JSON.parse(localStrg);
+        listArray = JSON.parse(LocalStrg);
     }
-
     const pendingTasksNumb = document.querySelector(".pendingTasks");
     pendingTasksNumb.textContent = listArray.length;
     if (listArray.length > 0) {
@@ -45,10 +44,25 @@ function showTasks() {
     } else {
         del.classList.remove("active");
     }
-    let newLi = "";
+    let newLiTag = "";
     listArray.forEach((element, index) => {
-        newLi += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+        newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
     });
-    list.innerHTML = newLi;
+    list.innerHTML = newLiTag;
     inputBody.value = "";
+}
+
+
+function deleteTask(index) {
+    let LocalStrg = localStorage.getItem("Notes");
+    listArray = JSON.parse(LocalStrg);
+    listArray.splice(index, 1);
+    localStorage.setItem("Notes", JSON.stringify(listArray));
+    showTasks();
+}
+
+del.onclick = () => {
+    listArray = [];
+    localStorage.setItem("Notes", JSON.stringify(listArray));
+    showTasks();
 }
