@@ -1,21 +1,22 @@
-const input = document.querySelector(".note-input input");
-const btn = document.querySelector(".note-input button");
+const inputBody = document.querySelector(".note-input input");
+const btnTxt = document.querySelector(".note-input button");
 const list = document.querySelector(".list");
 const del = document.querySelector(".footer button");
 
-btn.onkeyup = () => {
-    let userInput = input.value;
+inputBody.onkeyup = () => {
+    let userInput = inputBody.value;
     if (userInput.trim() != 0) {
-        btn.classList.add("active");
+        btnTxt.classList.add("active");
     } else {
-        btn.classList.remove("active");
+        btnTxt.classList.remove("active");
     }
 }
+
 showTasks();
 
 
-btn.onclick = () => {
-    let userInput = input.value;
+btnTxt.onclick = () => {
+    let userInput = inputBody.value;
     let localStrg = localStorage.getItem("New note!");
     if (localStrg == null) {
         listArray = [];
@@ -23,9 +24,9 @@ btn.onclick = () => {
         listArray = JSON.parse(localStrg);
     }
     listArray.push(userInput);
-    localStrg.setItem("New note", JSON.stringify(listArray));
+    localStrg.setItem("New note!", JSON.stringify(listArray));
     showTasks();
-    btn.classList.remove("active");
+    btnTxt.classList.remove("active");
 }
 
 
@@ -34,10 +35,10 @@ function showTasks() {
     if (localStrg == null) {
         listArray = [];
     } else {
-        listArray = JSON.parse(localStrg)
+        listArray = JSON.parse(localStrg);
     }
 
-    const pendingTasksNumb = document.querySelector(".your-tasks");
+    const pendingTasksNumb = document.querySelector(".pendingTasks");
     pendingTasksNumb.textContent = listArray.length;
     if (listArray.length > 0) {
         del.classList.add("active");
@@ -45,9 +46,9 @@ function showTasks() {
         del.classList.remove("active");
     }
     let newLi = "";
-    listArray.forEach((el, index) => {
-        newLi += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`
+    listArray.forEach((element, index) => {
+        newLi += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
     });
     list.innerHTML = newLi;
-    input.value = "";
+    inputBody.value = "";
 }
