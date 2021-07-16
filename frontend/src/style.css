@@ -36,10 +36,49 @@ body {
   margin-right: 40px;
   list-style-type: none;
 }
-.join {
+.toggle {
   display: flex;
   justify-content: space-between;
 }
+
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: rgb(238, 255, 0);
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 1s ease all;
+}
+
+.toggle-icon {
+  color: rgb(123, 12, 197);
+}
+
+.first-container.active {
+  background-color: aqua;
+}
+
+.third-container.active {
+  background-color: bisque;
+  color: #721ce3;
+}
+
+.contacts.active {
+  background-color: aqua;
+}
+.contacts li.active {
+  background-color: black;
+}
+.toggle.active {
+  background-color: black;
+}
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
 /*HEADER*/
 
 /*IMAGE*/
@@ -49,7 +88,7 @@ body {
 /*Notes Container*/
 
 .third-container {
-  background: #fff;
+  background: rgb(165, 34, 34);
   max-width: 400px;
   width: 100%;
   margin: 120px auto;

@@ -66,3 +66,15 @@ del.onclick = () => {
     localStorage.setItem("Notes", JSON.stringify(listArray));
     showTasks();
 }
+
+
+const sun_or_moon = document.querySelector(".toggle-ball");
+const itms = document.querySelectorAll(".first-container,.contacts,.toggle,.third-container");
+
+sun_or_moon.addEventListener("click", () => {
+    itms.forEach((item) => {
+        item.classList.toggle("active");
+    }
+    );
+    sun_or_moon.classList.toggle("active")
+});
