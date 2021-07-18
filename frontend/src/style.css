@@ -14,19 +14,28 @@
 body {
   width: 100%;
   height: 100vh;
+  background-color: rgb(122, 122, 189);
 }
 
 /*HEADER*/
 .first-container header {
   display: flex;
   justify-content: space-between;
-  background-color: lightseagreen;
+  background-color: rgb(152, 195, 252);
 }
 #logo-name {
   font-size: 35px;
   color: rgb(8, 8, 70);
   margin-left: 20px;
   margin-top: 5px;
+}
+#logo-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 800px;
+  margin-top: 10px;
 }
 .contacts {
   display: flex;
@@ -40,7 +49,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .toggle-ball {
   width: 18px;
   height: 18px;
@@ -56,13 +64,17 @@ body {
   color: rgb(123, 12, 197);
 }
 
-.first-container.active {
-  background-color: aqua;
+.first-container header.active {
+  background-color: rgb(128, 48, 114);
 }
 
 .third-container.active {
-  background-color: bisque;
+  background-color: rgb(51, 18, 54);
   color: #721ce3;
+}
+
+body.active {
+  background-color: #361f53;
 }
 
 .contacts.active {
@@ -81,14 +93,27 @@ body {
 
 /*HEADER*/
 
-/*IMAGE*/
-
-/*IMAGE*/
+/*BLOCKADD*/
+.second-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#message {
+  color: rgb(204, 177, 142);
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#add-block {
+  display: flex;
+  justify-self: center;
+}
+/*BLOCKADD*/
 
 /*Notes Container*/
 
 .third-container {
-  background: rgb(165, 34, 34);
+  background-color: rgb(90, 90, 207);
   max-width: 400px;
   width: 100%;
   margin: 120px auto;

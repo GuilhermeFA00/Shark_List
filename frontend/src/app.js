@@ -69,7 +69,7 @@ del.onclick = () => {
 
 
 const sun_or_moon = document.querySelector(".toggle-ball");
-const itms = document.querySelectorAll(".first-container,.contacts,.toggle,.third-container");
+const itms = document.querySelectorAll("body,.first-container header,.third-container");
 
 sun_or_moon.addEventListener("click", () => {
     itms.forEach((item) => {
