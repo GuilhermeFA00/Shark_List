@@ -68,7 +68,7 @@ body {
   background-color: rgb(128, 48, 114);
 }
 
-.third-container.active {
+.second-container.active {
   background-color: rgb(51, 18, 54);
   color: #721ce3;
 }
@@ -93,39 +93,22 @@ body.active {
 
 /*HEADER*/
 
-/*BLOCKADD*/
-.second-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-#message {
-  color: rgb(204, 177, 142);
-  font-size: 25px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-#add-block {
-  display: flex;
-  justify-self: center;
-}
-/*BLOCKADD*/
-
 /*Notes Container*/
 
-.third-container {
+.second-container {
   background-color: rgb(90, 90, 207);
   max-width: 400px;
   width: 100%;
-  margin: 120px auto;
+  margin: 20px auto;
   padding: 25px;
-  border-radius: 5px;
+  border-radius: 22%;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
-.third-container header {
+.second-container header {
   font-size: 30px;
   font-weight: 600;
 }
-.third-container .noteInput {
+.second-container .noteInput {
   margin: 20px 0;
   width: 100%;
   display: flex;
@@ -167,7 +150,7 @@ body.active {
   opacity: 1;
   pointer-events: auto;
 }
-.third-container .list {
+.second-container .list {
   max-height: 250px;
   overflow-y: auto;
 }
@@ -197,7 +180,7 @@ body.active {
 .list li:hover .icon {
   right: 0px;
 }
-.third-container .footer {
+.second-container .footer {
   display: flex;
   width: 100%;
   margin-top: 20px;

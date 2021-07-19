@@ -3,7 +3,6 @@ const addBtn = document.querySelector(".noteInput button");
 const list = document.querySelector(".list");
 const del = document.querySelector(".footer button");
 
-
 inputBody.onkeyup = () => {
     let userEnteredValue = inputBody.value;
     if (userEnteredValue.trim() != 0) {
@@ -69,7 +68,7 @@ del.onclick = () => {
 
 
 const sun_or_moon = document.querySelector(".toggle-ball");
-const itms = document.querySelectorAll("body,.first-container header,.third-container");
+const itms = document.querySelectorAll("body,.first-container header,.second-container");
 
 sun_or_moon.addEventListener("click", () => {
     itms.forEach((item) => {
