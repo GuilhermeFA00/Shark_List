@@ -1,3 +1,17 @@
+//Mode dark/light choice
+const sun_or_moon = document.querySelector(".toggle-ball");
+const itms = document.querySelectorAll("body,.first-container header,.second-container,.fourth-container");
+
+sun_or_moon.addEventListener("click", () => {
+    itms.forEach((item) => {
+        item.classList.toggle("active");
+    }
+    );
+    sun_or_moon.classList.toggle("active")
+});
+
+
+//TO do list
 const inputBody = document.querySelector(".noteInput input");
 const addBtn = document.querySelector(".noteInput button");
 const list = document.querySelector(".list");
@@ -67,13 +81,33 @@ del.onclick = () => {
 }
 
 
-const sun_or_moon = document.querySelector(".toggle-ball");
-const itms = document.querySelectorAll("body,.first-container header,.second-container");
+//Arrows action
 
-sun_or_moon.addEventListener("click", () => {
-    itms.forEach((item) => {
-        item.classList.toggle("active");
+const arws = document.querySelectorAll(".arrow");
+const apr_list = document.querySelectorAll(".apr-list");
+
+//Scrools of arrows
+arws.forEach(
+    (arrow, index) => {
+        //Return the number of nodes "img" 
+        const index_num = apr_list[index].querySelectorAll("img").length;
+        var click_counter = 0;
+        //The event i'll to occur with click from user
+        arrow.addEventListener("click", () => {
+            //The ratio for each click : Math.floor(window.innerWidth / 270);
+            const ratio = Math.floor(window.innerWidth / 270);
+            //Incrementing to click counter
+            click_counter++;
+            //Conditional structure for change the style according to event 
+            if (index_num - (4 + click_counter) + (4 - ratio) >= 0) {
+                //acessing CSS methods with template strings
+                apr_list[index].style.transform = `translateX(${apr_list[index].computedStyleMap().get("transform")[0].x.value - 300
+                    }px)`;
+            } else {
+                apr_list[index].style.transform = "translateX(0)";
+                //The counter back to zero
+                click_counter = 0;
+            }
+        });
     }
-    );
-    sun_or_moon.classList.toggle("active")
-});
+);
