@@ -307,7 +307,7 @@ body.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 170vh;
   margin: 0;
   font-family: "Zen Tokyo Zoo", cursive;
   background: rgb(81, 188, 202);
@@ -317,50 +317,51 @@ body.active {
   background-color: #333;
 }
 
-#notesContainer {
+#notesWrapper {
   padding: 50px;
 }
 
-.btn-notes {
+.new-note-btn {
   width: 200px;
   display: block;
   margin: 0 auto 20px;
-  background-color: rgb(0, 238, 255);
+  background-color: rgb(155, 253, 152);
   padding: 10px 32px;
-  border: 1px solid #97ff6e;
+  border: 1px solid #e0e0e0;
   font-size: 26px;
   outline: 0;
   transition: all 0.3s;
   cursor: pointer;
+  font-family: "Caveat", cursive;
 }
-.btn-notes:hover {
+.new-note-btn:hover {
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
 }
 
-.btn-notes:active {
+.new-note-btn:active {
   position: relative;
   top: 1px;
 }
 
-.banknoteSet {
+.tc-notes {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
 }
-.note {
-  background-color: #16ec32;
-  border-radius: 8px;
-  width: 280px;
+.tc-note {
+  background-color: #06fff3;
+  border-radius: 15%;
+  width: 350px;
   margin: 0 10px 20px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
   transition: all 0.5s;
   cursor: pointer;
 }
-.note-header {
+.tc-note-header {
   padding: 10px 16px 0;
 }
-.note-close {
+.tc-note-close {
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -369,32 +370,32 @@ body.active {
   text-align: center;
   transition: all 0.3s;
 }
-.note-close:hover {
+.tc-note-close:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.note-close:focus {
+.tc-note-close:focus {
   box-shadow: inset 2px 3px 0px rgba(0, 0, 0, 0.8);
 }
-.note-close {
+.tc-note-close {
   float: right;
 }
-.note-title,
-.note-content {
+.tc-note-title,
+.tc-note-body {
   outline: 0;
 }
 
-.note-title {
+.tc-note-title {
   font-size: 24px;
   padding: 10px 16px;
   font-weight: bold;
 }
 
-.note-content {
+.tc-note-body {
   font-size: 20px;
   padding: 10px 16px 16px;
 }
-.note-content:hover {
+.tc-note-body:hover {
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
