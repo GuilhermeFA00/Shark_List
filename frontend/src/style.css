@@ -319,6 +319,7 @@ body.active {
 
 #notesWrapper {
   padding: 50px;
+  margin-bottom: 350px;
 }
 
 .new-note-btn {
@@ -347,7 +348,7 @@ body.active {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .tc-note {
   background-color: #06fff3;
