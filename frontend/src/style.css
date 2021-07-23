@@ -274,21 +274,6 @@ body.active {
   transition: 1s all ease-in-out;
 }
 
-.apr-list-item-button {
-  padding: 10px;
-  background-color: #4dbf00;
-  color: white;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  left: 50px;
-  opacity: 0;
-  transition: 1s all ease-in-out;
-}
-
 .arrow {
   font-size: 120px;
   position: absolute;
